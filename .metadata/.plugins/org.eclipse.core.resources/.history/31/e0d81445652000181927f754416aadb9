@@ -1,0 +1,7 @@
+package Owner;
+
+import service.OwnerDAO;
+
+public class OwnerDAOImpl implements OwnerDAO {
+
+}

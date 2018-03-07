@@ -1,0 +1,5 @@
+package service.DAO.CommonageDAO;
+
+public class CommonageDAO {
+
+}

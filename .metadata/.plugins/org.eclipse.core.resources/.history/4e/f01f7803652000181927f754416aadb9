@@ -1,0 +1,5 @@
+package Owner.copy;
+
+public class OwnerDAOImpl implements OwnerDAO {
+
+}

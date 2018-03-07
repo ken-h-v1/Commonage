@@ -1,0 +1,12 @@
+package com.kenneth.SpringTest.controller;
+
+@Controller
+public class CommonageDataScreenController {
+
+	@GetMapping("CommonageDataScreen")
+	public String getPage()
+	{
+		return "lists/CommonageDataScreen";
+	}
+	
+}

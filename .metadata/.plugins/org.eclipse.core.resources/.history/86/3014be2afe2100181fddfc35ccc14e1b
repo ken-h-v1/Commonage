@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+
+<head>
+  <meta http-equiv="Pragma" content="no-cache"/>
+  <meta http-equiv="Cache-Control" content="max-age=0"/>
+  <meta http-equiv="Cache-Control" content="no-store"/>
+  <meta http-equiv="Cache-Control" content="no-cache"/>
+  <meta http-equiv="Cache-Control" content="must-revalidate"/>
+  
+  <meta charset="utf-8">
+  <title>List Parcels</title>
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!--stylesheet-->
+  
+  
+  <link href="css/printStyle-min.css" rel="stylesheet" type = "text/css" media="print">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style-min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+  
+  <!-- Fav and touch icons -->
+  <link rel="shortcut icon" href="images/favicon.ico">  
+  <!--[if lt IE 9]> 
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.js"></script>
+    <script src="js/plugin/selectize/es5.js"></script>
+    <html class="ie8">
+  <![endif]-->
+  <!--script-->
+  
+  
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="our-resources-/js/multipleUnloading-min.js"></script>
+  
+  <script type="text/javascript" src="our-resources-/js/requestHandler-min.js" async="async"></script>
+  <script type="text/javascript" src="our-resources-/js/scottishDerogationScript-min.js" async="async"></script>
+  <script type="text/javascript" src="our-resources-/js/tabNames-min.js" async="async"></script>
+  
+  <script type="text/javascript" src="our-resources-/js/displayHelp-min.js" async="async"></script>
+  
+</head>
+
+
+    
+
+
+<body>
+
+
+
+
+<div class="container" role="banner">
+	<div class="row">
+		<div class="col-xs-3 col-md-3">
+				<img id="img-banner" alt="banner" src="images/banner-img.png" class="img-responsive"/>
+		</div>
+		<div class="col-xs-7 col-md-7">
+
+            <h1>Commonage Database Management System</h1>    
+			
+		</div>
+        <div class="col-xs-2 col-md-2">
+
+            <p>Logged In: Joe Bloggs</p>    
+			
+		</div>
+</div>
+
+             
+		</div>
+	</div>
+	<hr />
+</div>
+
+    
+    
+    <nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div id = "navbarPrintRemove">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <!-- Collect the nav links, forms, and other content for toggling -->
+
+        <div class="navbar-header">
+            <div id="homeToolsContainer">
+                    <div>
+	<button type="button" class="navbar-toggle home-dropdown" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		<span class="sr-only">Toggle navigation</span>
+		 <span style="color:#ddd7bd">Menu</span> 
+	</button>
+</div>
+            </div>
+        </div>
+            <div class="collapse navbar-collapse"
+                id="bs-example-navbar-collapse-1">
+                
+                
+                
+              		<ul class="nav navbar-nav">
+					<li><a href="ListHerds" class="navbar-brand" >List Herds |</a></li>
+				</ul>
+				
+												
+				<ul class="nav navbar-nav">
+					<li><a href="ListParcels" class="navbar-brand" >List Parcels |</a></li>
+				</ul>
+				
+                           
+                <ul class="nav navbar-nav test">
+					<li><a href="ByCounty" class="navbar-brand" >List By County |</a></li>
+				</ul>
+                    
+                <ul class="nav navbar-nav test">
+					<li><a href="ByTownland" class="navbar-brand" >List By Townland |</a></li>
+				</ul>
+            
+                    <ul class="nav navbar-nav test">
+					<li><a href="CommonageDataScreen" class="navbar-brand" >Commonage Data |</a></li>
+				</ul>
+		
+                    <ul class="nav navbar-nav test">
+					<li><a href="CommonageClaimsSearch" class="navbar-brand" >BPS Commonage Claims |</a></li>
+				</ul>
+                    
+                    <ul class="nav navbar-nav test">
+					<li><a href="UnequalShareCases" class="navbar-brand" >Unequal Share Cases |</a></li>
+				</ul>
+                    
+                     <ul class="nav navbar-nav test">
+					<li><a href="Exit" class="navbar-brand" >Exit</a></li>
+				</ul>			
+			
+		
+			
+				<!--<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span style="color:#ddd7bd">Menu</span>
+				</button>
+				<a href="portal" class="navbar-brand" >Home</a>-->
+			
+
+                        
+                    
+                    
+                </ul>
+
+                    
+                
+                
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+<!--end of navbar-->
+    
+    
+    <div role="main">
+        
+        
+        
+        
+        <span id="maincontent"/>
+        <div class="container">
+    	<div class="jumbotron">
+            <div style="height: 50px; float: center;">
+                  <!--<p id="header" style="font-weight: bold;">List Parcels in Commonage</p>-->
+                <h3>List Parcels in Commonage</h3>
+                <h1>You have selected ${commonageId}</h1>
+            </div>
+            
+            <form role="form">
+                        <div class="form-inline">
+
+                            <label>Commonage ID:</label>
+                            <input type="text" name="commonage_id" class="form-control" />
+                            <button type="submit" onclick="return showDiv()" class="btn btn-default">View</button>
+                        </div>
+                    </form>
+            
+            <!--<div style="height: 50px; float: center;">
+                <div class="col-xs-3 col-md-3 col-lg-3" style="display: inline-block;">
+                    <p>Enter Commonage ID: </p>
+                </div>
+                <div class="col-xs-2 col-md-2 col-lg-2" style="display: inline-block;">
+                    <input type="text" placeholder="Search..">
+                </div>
+                <div>
+                    <button type="button" class="col-xs-1 col-md-1 col-lg-1" style="display: inline-block; border-radius: 20px; background-color: #FFFFFF;">View</button>
+                </div>
+            </div>-->
+    	</div>
+    
+        
+        <div style="padding-left: 20px; padding-top: 50px; padding-bottom: 10px; display: none" id="result_table">
+            
+        <table border="1" style="width: 80%; height: 200px; text-align: center;">
+                <tr style="background-color: #ddd7bd;">
+                    <th style="text-align: center;">Parcel ID</th>
+                    <th style="text-align: center;">Gross Area</th>
+                    <th style="text-align: center;">Max Eligible Area</th>
+                    <th style="text-align: center;">Min. Density</th>
+                    <th style="text-align: center;">Max Density</th>
+                </tr>
+                <tr>
+                    <td>A10101A</td>
+                    <td>123:21</td>
+                    <td>100</td>
+                    <td>239</td>
+                    <td>265</td>
+                </tr>
+                <tr>
+                    <td>A1060018</td>
+                    <td>112:25</td>
+                    <td>78</td>
+                    <td>150</td>
+                    <td>176</td>
+                </tr>
+                <tr>
+                    <td>A1060034</td>
+                    <td>101:14</td>
+                    <td>87</td>
+                    <td>156</td>
+                    <td>162</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+        
+</div>
+    
+        
+
+<div class="footer col-xs-12 padding-top-bottom-20 margin-top-30 text-muted" role="contentinfo">
+    
+    <span class="pull-left">&copy; Department of Agriculture, Food and the Marine, 2018</span>
+    <span class="pull-right">Environment:  Version: </span>
+</div>
+
+    
+    
+    <script type="text/javascript">
+        function showDiv() {
+
+    var x = document.getElementById("result_table");
+    if (x.style.display == "none") {
+        x.style.display = "block";
+        return false;
+    } 
+}
+    </script>
+</body>
+</html>

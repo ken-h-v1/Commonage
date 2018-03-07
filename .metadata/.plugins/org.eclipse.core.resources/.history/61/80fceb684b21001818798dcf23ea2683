@@ -1,0 +1,5 @@
+package service.DAO.HerdDAO;
+
+public class HerdDAOImpl implements HerdDAO {
+
+}

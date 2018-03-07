@@ -1,0 +1,25 @@
+package com.kenneth.SpringTest.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+@Controller
+public class ListParcelsController {
+
+	@GetMapping("ListParcels")
+	public String getPage(@RequestParam(name="commonageid", required=false, defaultValue="World") String commonageid, Model model) {
+        model.addAttribute("commonageid", commonageid);
+		return "lists/ListParcels";
+	}
+	
+	@GetMapping("ListParcels/{commonageId}")
+	public String doSomething(Model model)
+	{
+		model.addAttribute("commonageId", "IT WORKED");
+		
+		return "list/Parcels";
+	}
+	
+}

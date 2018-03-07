@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="model.Owner"/>
+<fullyQualifiedTypeName name="service.DAO.ParcelDAO.ParcelDAO"/>
+<fullyQualifiedTypeName name="service.DAO.HerdDAO.HerdDAO"/>
+<fullyQualifiedTypeName name="service.DAO.CountyDAO.CountyDOA"/>
+<fullyQualifiedTypeName name="org.springframework.boot.autoconfigure.EnableAutoConfiguration"/>
+</qualifiedTypeNameHistroy>

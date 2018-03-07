@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="max-age=0" />
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="must-revalidate" />
+
+    <meta charset="utf-8">
+    <title>Commonage Data Screen</title>
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--stylesheet-->
+
+
+    <link href="our-resources-/css/printStyle-min.css" rel="stylesheet" type="text/css" media="print">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="our-resources-/css/style-min.css" rel="stylesheet">
+
+    <!-- Fav and touch icons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <!--[if lt IE 9]> 
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.js"></script>
+    <script src="js/plugin/selectize/es5.js"></script>
+    <html class="ie8">
+  <![endif]-->
+    <!--script-->
+
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="our-resources-/js/multipleUnloading-min.js"></script>
+
+    <script type="text/javascript" src="our-resources-/js/requestHandler-min.js" async="async"></script>
+    <script type="text/javascript" src="our-resources-/js/scottishDerogationScript-min.js" async="async"></script>
+    <script type="text/javascript" src="our-resources-/js/tabNames-min.js" async="async"></script>
+
+    <script type="text/javascript" src="our-resources-/js/displayHelp-min.js" async="async"></script>
+
+</head>
+
+
+
+
+
+<body>
+    <!--<div class="container" role="banner">
+        <div class="row">
+            <div class="col-xs-6 col-md-6">
+                <img id="img-banner" alt="banner" src="images/banner.png" class="img-responsive" />
+            </div>
+
+
+        </div>
+
+    </div>-->
+    <div class="container" role="banner">
+	   <div class="row">
+		  <div class="col-xs-3 col-md-3">
+				<img id="img-banner" alt="banner" src="images/banner-img.png" class="img-responsive"/>
+		  </div>
+		  <div class="col-xs-7 col-md-7">
+
+            <h1>Commonage Database Management System</h1>    
+			
+		  </div>
+            <div class="col-xs-2 col-md-2">
+
+                <p>Logged In: Joe Bloggs</p>    
+			
+		    </div>
+       </div>
+    </div>
+	<hr />
+    </div>
+
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div id="navbarPrintRemove">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span style="color:#ddd7bd">Menu</span>
+                        </button>
+
+                        <ul class="nav navbar-nav">
+					<li><a href="List%20Herd%20by%20Numbers%20in%20Commonage.html" class="navbar-brand" >List Herds |</a></li>
+				</ul>
+				
+												
+				<ul class="nav navbar-nav">
+					<li><a href="List%20Parcels%20in%20Commonage.html" class="navbar-brand" >List Parcels |</a></li>
+				</ul>
+				
+                           
+                <ul class="nav navbar-nav test">
+					<li><a href="List%20Commonages%20by%20County.html" class="navbar-brand" >List By County |</a></li>
+				</ul>
+                    
+                <ul class="nav navbar-nav test">
+					<li><a href="List%20Commonages%20by%20Townland.html" class="navbar-brand" >List By Townland |</a></li>
+				</ul>
+            
+                    <ul class="nav navbar-nav test">
+					<li><a href="commonage-data-screen.html" class="navbar-brand" >Commonage Data |</a></li>
+				</ul>
+		
+                    <ul class="nav navbar-nav test">
+					<li><a href="Commonage%20Claims%20Search.html" class="navbar-brand" >BPS Commonage Claims |</a></li>
+				</ul>
+                    
+                    <ul class="nav navbar-nav test">
+					<li><a href="Unequal%20Share%20Cases.html" class="navbar-brand" >Unequal Share Cases |</a></li>
+				</ul>
+                    
+                     <ul class="nav navbar-nav test">
+					<li><a href="Exit.html" class="navbar-brand" >Exit</a></li>
+				</ul>
+
+                    </ul>
+                    </li>
+
+                  
+                </div>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <!--end of navbar-->
+
+
+
+    <div role="main">
+
+        <span id="maincontent" />
+
+        <div class="container">
+            <div class="row">
+                <div class="jumbotron">
+
+                    <h3>Commonage Data</h3>
+
+                    <form role="form">
+                        <div class="form-inline">
+
+                            <label>Commonage ID:</label>
+                            <input type="text" name="commonage_id" class="form-control" />
+                            <button type="submit" onclick="return showDiv()" class="btn btn-default">View</button>
+                        </div>
+                    </form>
+                </div>
+                <div id="contenterino" hidden>
+                <div class="jumbotron">
+                    <h3>Edit Commonage Data</h3>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <h6><b>Townland</b></h6>
+                            <input type="text" name="commonage_id" class="input-sm" />
+                        </div>
+
+                        <div class="col-sm-2">
+                            <h6><b>Gross Area (ha)</b></h6>
+                            <input type="text" name="commonage_id" class="input-sm" />
+                        </div>
+
+                        <div class="col-sm-2">
+                            <h6><b>Max Eligible Area (ha)</b></h6>
+                            <input type="text" name="commonage_id" class="input-sm" />
+                        </div>
+
+                        <div class="col-sm-2">
+                            <h6><b>Min Stocking</b></h6>
+                            <input type="text" name="commonage_id" class="input-sm" />
+                        </div>
+
+                        <div class="col-sm-2">
+                            <h6><b>Max Stocking</b></h6>
+                            <input type="text" name="commonage_id" class="input-sm" />
+                        </div>
+
+                        <div class="col-sm-2">
+                            <h6><b>Start Date</b></h6>
+                            <input type="date" name="commonage_id" class="input-sm" />
+                        </div>
+
+                        <div class="col-sm-2">
+                            <h6><b>End Date</b></h6>
+                            <input type="date" name="commonage_id" class="input-sm" />
+                        </div>
+
+                        <div class="col-sm-2">
+                            <h6><b>Owner Share</b></h6>
+                            <input type="text" name="commonage_id" class="input-sm" />
+                        </div>
+
+                        <div class="col-sm-2">
+                            <h6><b>Type</b></h6>
+                            <input type="text" name="commonage_id" class="input-sm" />
+                        </div>
+
+                        <div class="col-sm-2">
+                          <br/>
+
+                            <button type="submit" class="btn btn-default">Update</button>
+                        </div>
+                    </div>
+                    <hr/>
+
+                    <div class="row">
+                        <div class="form-group">
+                            <label for="comment">Comment:</label>
+                            <textarea class="form-control" rows="5" id="comment"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="form-group">
+                            <button type="submit" class="btn btn-default">Save Comment</button>&nbsp;
+                
+                            <button type="submit" class="btn btn-default">Comment Log</button>&nbsp;
+  
+                            <button type="submit" class="btn btn-default">History</button>&nbsp;
+                        </div>
+                    </div>
+
+                </div>
+                <div class="jumbotron">
+                    <h3>Commonage Parcel Identifiers</h3>
+
+                    <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Parcel ID</th>
+        <th>Gross Area</th>
+        <th>Max Area</th>
+        <th>Min Density</th>
+        <th>Max Density</th>
+        <th>Allocate</th>
+        <th>Commonage ID</th>
+        <th>New Commonage ID</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>E1651692</td>
+        <td>4.5666</td>
+        <td>3.58</td>
+        <td>17</td>
+        <td>20</td>
+        <td></td>
+        <td>E16516G</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E1651692</td>
+        <td>4.5666</td>
+        <td>3.58</td>
+        <td>17</td>
+        <td>20</td>
+        <td></td>
+        <td>E16516G</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E1651692</td>
+        <td>4.5666</td>
+        <td>3.58</td>
+        <td>17</td>
+        <td>20</td>
+        <td></td>
+        <td>E16516G</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>E1651692</td>
+        <td>4.5666</td>
+        <td>3.58</td>
+        <td>17</td>
+        <td>20</td>
+        <td></td>
+        <td>E16516G</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+                    <form role="form">
+                        <div class="form-inline">
+
+                            <label>Add New Parcel:</label>
+                            <input type="text" name="commonage_id" class="form-control" />
+                            <button type="submit" class="btn btn-default">View</button>
+                        </div>
+                    </form>
+                    <br/>
+
+                    <div class="row">
+                      <div class="form-group">
+                            <button type="submit" class="btn btn-default">Reset</button>&nbsp;
+                
+                            <button type="submit" class="btn btn-default">Save</button>&nbsp;
+                        </div>
+                    </div>
+                </div>
+                <div class="jumbotron">
+                    <h3>Herd numbers and non-css commonage owners</h3>
+
+                                        <table class="table table-striped">
+    <thead>
+      <tr>
+        <td><button type="submit" class="btn btn-default" data-toggle="modal" data-target="#removeOwnerModal">Remove Owner</button></td>
+        <td><button type="submit" class="btn btn-default">Update Owner</button></td>
+        <td><button type="submit" class="btn btn-default">View/Upload Document</button></td>
+      </tr>
+      <tr>
+        <th>Select</th>
+        <th>Herd Number</th>
+        <th>Fraction</th>
+        <th>Evidence Supplied</th>
+        <th>Folio Number</th>
+        <th>Claimed Area</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="radio" name="herd_id"/></td>
+        <td>4.5666</td>
+        <td>3.58</td>
+        <td>17</td>
+        <td>20</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><input type="radio" name="herd_id"/></td>
+        <td>4.5666</td>
+        <td>3.58</td>
+        <td>17</td>
+        <td>20</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><input type="radio" name="herd_id"/></td>
+        <td>4.5666</td>
+        <td>3.58</td>
+        <td>17</td>
+        <td>20</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><input type="radio" name="herd_id"/></td>
+        <td>4.5666</td>
+        <td>3.58</td>
+        <td>17</td>
+        <td>20</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <br/>
+  <div class="row">
+    <button type="submit" class="btn btn-default" data-toggle="modal" data-target="#addOwnerModal">Add Owner</button>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="addOwnerModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Add Owner</h4>
+        </div>
+        <div class="modal-body">
+          <form class="form-horizontal" >
+  
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="email">Herd Number:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="herd_num" placeholder="Enter Herd Number:">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="email">Share Numerator:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="herd_num" placeholder="Enter Share Numerator:">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="email">Share Denominator:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="herd_num" placeholder="Enter Share Denominator:">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="email">Start Date:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="herd_num" placeholder="Enter Start Date:">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="email">Evidence Supplied:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="herd_num" placeholder="Enter Evidence Supplied:">
+    </div>
+  </div>
+  
+  <div class="form-group"> 
+    <label class="control-label col-sm-2" for="email">Leased Share:</label>
+    <div class="col-sm-10">
+      <div class="checkbox">
+    <input type="checkbox">
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="email">Folio Number:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="herd_num" placeholder="Enter Folio Number:">
+    </div>
+  </div>
+  <div class="form-group"> 
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">Submit</button>
+    </div>
+  </div>
+</form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- Modal -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="removeOwnerModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Are you sure?</h4>
+        </div>
+        <div class="modal-body">
+
+<div class="row">
+    <div class="col-md-6">
+      <button type="submit" class="btn btn-success btn-lg">Yes</button>
+    </div>
+    <div class="col-md-6">
+      <button type="submit" class="btn btn-danger btn-lg" data-dismiss="modal">No</button>
+    </div>
+  </div>
+
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- Modal -->
+
+
+                </div>
+            </div>
+
+        </div>
+</div>
+    </div>
+
+
+
+    <div class="footer col-xs-12 padding-top-bottom-20 margin-top-30 text-muted" role="contentinfo">
+
+        <span class="pull-left">&copy; Department of Agriculture, Food and the Marine, 2018</span>
+        <span class="pull-right">Environment:  Version: </span>
+    </div>
+
+
+
+    <script type="text/javascript">
+        var pageHelp = "";
+    </script>
+    <script>
+function showDiv() {
+    document.getElementById("contenterino").hidden = false;
+}
+</script>
+</body>
+
+</html>

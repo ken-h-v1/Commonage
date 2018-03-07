@@ -1,0 +1,15 @@
+package com.kenneth.controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("api/v1/")
+public class ListHerdsController {
+	
+	@RequestMapping(value="api/v1/", method=RequestMethod.GET)
+    public String home() {
+        return "UnequalShareCases";
+	}
+
+}

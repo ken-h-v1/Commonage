@@ -1,0 +1,5 @@
+package Owner;
+
+public interface OwnerDAO {
+
+}

@@ -1,0 +1,21 @@
+package com.kenneth.SpringTest.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class HomeController {
+	
+	@GetMapping("ListHerds")
+	public String getHomePage()
+	{
+		return "lists/index";
+	}
+	
+	@GetMapping("Exit")
+	public String getExitPage()
+	{
+		return "lists/Exit";
+	}
+
+}

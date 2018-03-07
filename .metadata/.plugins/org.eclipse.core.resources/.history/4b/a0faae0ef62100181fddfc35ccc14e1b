@@ -1,0 +1,19 @@
+package com.kenneth.SpringTest.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+
+public class HomeController {
+	
+	@GetMapping("/")
+	public String getHomePage()
+	{
+		return "lists/Home";
+	}
+	
+	@GetMapping("Exit")
+	public String getExitPage()
+	{
+		return "lists/Exit";
+	}
+
+}

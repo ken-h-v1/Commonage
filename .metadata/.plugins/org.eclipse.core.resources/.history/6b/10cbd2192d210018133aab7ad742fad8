@@ -1,0 +1,12 @@
+package service.OwnerDAO;
+
+import model.Owner;
+
+public interface OwnerDAO {
+
+	public void updateOwner(Owner owner);
+	
+	public Owner getOwnerDetails(Owner owner);
+	
+	public boolean setOwnerDetails(Owner owner);
+}

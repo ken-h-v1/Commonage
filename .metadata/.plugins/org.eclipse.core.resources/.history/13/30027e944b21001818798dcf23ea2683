@@ -1,0 +1,5 @@
+package service.Document;
+
+public class DocumentService {
+
+}

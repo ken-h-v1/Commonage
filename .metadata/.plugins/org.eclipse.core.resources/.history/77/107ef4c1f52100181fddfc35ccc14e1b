@@ -1,0 +1,14 @@
+package com.kenneth.SpringTest.controller;
+
+public class HomeController {
+	
+	@GetMapping("Home")
+	public String getHomePage()
+	{
+		
+	}
+	
+	@GetMapping("Exit")
+	public 
+
+}

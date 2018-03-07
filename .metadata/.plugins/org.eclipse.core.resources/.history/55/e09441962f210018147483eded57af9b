@@ -1,0 +1,5 @@
+package service.DAO.DocumentDAO;
+
+public interface DoumentDAO {
+
+}

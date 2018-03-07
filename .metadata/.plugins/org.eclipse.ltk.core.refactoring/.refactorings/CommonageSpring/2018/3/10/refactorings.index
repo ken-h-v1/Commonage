@@ -1,0 +1,36 @@
+1520247122012	Rename package 'Model'
+1520247431207	Move folder
+1520247443398	Move folder
+1520247655744	Rename resource 'listHerdsByNumbersInCommonage.html'
+1520247863575	Delete element
+1520247873337	Copy package
+1520247885690	Delete element
+1520247991166	Move compilation unit
+1520247995882	Move compilation unit
+1520247999337	Delete element
+1520248041600	Delete element
+1520248830219	Delete elements
+1520331932082	Encapsulate field 'username'
+1520333017724	Encapsulate field 'countyName'
+1520333042221	Encapsulate field 'townlandName'
+1520333083144	Encapsulate field 'herdName'
+1520333108605	Encapsulate field 'parcelName'
+1520333132438	Encapsulate field 'documentName'
+1520333154575	Encapsulate field 'commonageID'
+1520333601870	Copy package
+1520333605963	Delete element
+1520333609441	Delete element
+1520333998914	Delete element
+1520334890375	Rename type 'DoumentDAO'
+1520335495301	Encapsulate field 'userID'
+1520346044648	Delete element
+1520346373389	Copy compilation unit
+1520346389119	Delete element
+1520346651552	Move compilation unit
+1520347079305	Rename resource 'Unequal Share Cases.html'
+1520347117949	Move file
+1520347133390	Move file
+1520351490088	Copy folder
+1520351505973	Copy folder
+1520351515029	Copy folder
+1520429621503	Copy package

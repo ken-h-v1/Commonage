@@ -1,0 +1,55 @@
+package com.kenneth.SpringTest.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+@Controller
+public class ListHerdsController {
+	
+	@GetMapping("ListHerds")
+	public String getPage() {
+		return "lists/ListHerds";
+	}
+	
+	@RequestMapping(value="/test", method=RequestMethod.GET)
+    public String handlePost(@RequestParam String action, Model m) {
+        if( action.equals("View") ){
+            return "hello";
+         }
+        m.addAttribute("name", "change");
+        return "lists/ByTownland";
+    }
+	
+	public double doCalc(double x, double y)
+	{
+		return x * y;
+	}
+
+	
+	
+
+	    @RequestMapping(path="/{name}/{age}")
+	    public String getMessage(@PathVariable("name") String name, 
+	            @PathVariable("age") String age) {
+	        
+	        String msg = String.format("%s is %s years old", name, age);
+	        
+	        return msg;
+	    }
+	    
+	    @RequestMapping(path="/{name}/{number}")
+	    public String getMessage2(@PathVariable("name") String name, 
+	            @PathVariable("age") String age) {
+	        
+	        String msg = String.format("%s is %s koplo old", name, age);
+	        
+	        return msg;
+	    }
+	
+}
